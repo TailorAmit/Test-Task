@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, {  useRef } from "react";
 import MaterialTable from "material-table";
 
 interface Props {
@@ -11,7 +11,7 @@ const columns: any = [
     title: "Image",
     field: "image",
     render: (rowData: any) => (
-      <img src={rowData.image} height={100} width={200} />
+      <img src={rowData.image} alt={rowData.image} height={100} width={200} />
     ),
   },
 ];

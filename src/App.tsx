@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Speacex } from "./component/Spacex";
+import { Speacex } from "./Pages/Spacex/index";
 
 import "./App.css";
 

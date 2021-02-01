@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import {
@@ -23,9 +23,9 @@ import {
 import _ from "lodash";
 import { makeStyles } from "@material-ui/core/styles";
 import { LAUNCHESPAST } from "./Query";
-import { CommonModal } from "../../container/CommonModal";
+import { CommonModal } from "../../Components/CommonModal";
 import { Ships } from "../ships/index";
-import { CompareDates } from "../../container/Compare";
+import { CompareDates } from "../../Components/Compare";
 
 const useStyles = makeStyles(() => ({
   AccountTableCss: {
@@ -75,7 +75,7 @@ export const Speacex: React.FC<Props> = (props: Props) => {
   );
 
   //graphql query or mutation
-  const { data, loading, error } = useQuery(LAUNCHESPAST);
+  const { data } = useQuery(LAUNCHESPAST);
 
   const ToggleFun = (data: any) => {
     if (data) {
